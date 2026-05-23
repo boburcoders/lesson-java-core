@@ -56,7 +56,7 @@ public class Test {
          *
          * */
 
-        CustomArrayList customArrayList = new CustomArrayList();
+        /*CustomArrayList<String> customArrayList = new CustomArrayList<>();
 //        System.out.println(customArrayList.capacity());
 //        System.out.println(customArrayList.size());
         customArrayList.add("Alisher");
@@ -80,13 +80,20 @@ public class Test {
 //        System.out.println(customArrayList.capacity());
 //        System.out.println(customArrayList.size());
 
-        List<String> list = new LinkedList<>(); // add,
-        List<String> array = new ArrayList<>();//shuni organidik, get index, set, remove,
+//        List<String> list = new LinkedList<>(); // add,
+//        List<String> array = new ArrayList<>();//shuni organidik, get index, set, remove,
 
 
 
-        System.out.println(customArrayList.contains("Bobur"));
+//        System.out.println(customArrayList.contains("Bobur"));
+        System.out.println(customArrayList);*/
 
+        CustomArrayList<Integer> numbers = new CustomArrayList<>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        System.out.println(numbers);
 
     }
 }

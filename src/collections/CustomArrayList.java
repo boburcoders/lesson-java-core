@@ -2,19 +2,19 @@ package collections;
 
 import java.util.*;
 
-public class CustomArrayList {
+public class CustomArrayList<T> {
 
 
     private static final int DEFAULT_CAPACITY = 5;
-    private Object[] elements;
+    private T[] elements;
     private int size;
 
     public CustomArrayList() {
-        this.elements = new Object[DEFAULT_CAPACITY];
+        this.elements = (T[]) new Object[DEFAULT_CAPACITY];
         this.size = 0;
     }
 
-    public void add(Object value) {
+    public void add(T value) {
         if (size == elements.length) {
             grow();
         }
@@ -30,7 +30,7 @@ public class CustomArrayList {
 
     public Object remove(int index) {
         checkIndex(index);
-        Object removedValue = elements[index];
+        T removedValue = elements[index];
         for (int i = index; i < size - 1; i++) {
             elements[i] = elements[i + 1];
         }
@@ -41,7 +41,7 @@ public class CustomArrayList {
         return removedValue;
     }
 
-    public boolean contains(Object value) {
+    public boolean contains(T value) {
         for (int i = 0; i < size; i++) {
             if (value == null) {
                 if (elements[i] == null) {
@@ -83,7 +83,7 @@ public class CustomArrayList {
 
 
     private void grow() {
-        Object[] newArray = new Object[elements.length * 2];
+        T[] newArray = (T[]) new Object[elements.length * 2];
         for (int i = 0; i < elements.length; i++) {
             newArray[i] = elements[i];
         }

@@ -18,10 +18,11 @@ public class CustomArrayList<T> {
         if (size == elements.length) {
             grow();
         }
+
+
         elements[size] = value;
         size++;
     }
-
     public Object get(int index) {
         checkIndex(index);
         return elements[index];

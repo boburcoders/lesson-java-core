@@ -1,4 +1,4 @@
-package collections;
+package collections.arrayList;
 
 public class Student {
     private Long id;

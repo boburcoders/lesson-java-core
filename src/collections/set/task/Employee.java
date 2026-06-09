@@ -35,7 +35,10 @@ public class Employee {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        int result = 41;
+        result = 41*43+id;
+        result = 47 * result +(name==null ? 0 : name.hashCode());
+        return result;
     }
 
     @Override

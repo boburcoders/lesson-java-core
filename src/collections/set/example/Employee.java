@@ -1,5 +1,9 @@
 package collections.set.example;
 
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Map;
+
 public class Employee implements Comparable {
     private Long id;
     private String name;
@@ -25,4 +29,6 @@ public class Employee implements Comparable {
         Employee employee = (Employee) o;
         return Double.compare(this.id, ((Employee) o).id);
     }
+
+    Map<String, Object> map = new HashMap<>();
 }

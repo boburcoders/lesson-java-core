@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.NotActiveException;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 public class JavaExceptionLesson {
     /*
@@ -48,9 +49,15 @@ public class JavaExceptionLesson {
         /*
          * try-catch
          * try-with-resource
+         *
+         * User user = db.getUserById(1) == null NotFundException();
+         * select d user as u where u.id=:id // sqlexception
+         *
+         * user.getName(); // nullPointer
          * */
 
         JavaExceptionLesson.deposit(-10);
+
 
     }
 

@@ -3,6 +3,8 @@ package onlineSavatTizimi.entity;
 public class Product {
     private int id;
     private String name;
+    private Double price;
+    private String model;
 
     public Product(int id, String name, String model) {
         this.id = id;
@@ -34,7 +36,6 @@ public class Product {
         this.model = model;
     }
 
-    private String model;
 
     @Override
     public String toString() {
@@ -43,5 +44,11 @@ public class Product {
                 ", name='" + name + '\'' +
                 ", model='" + model + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Product newProduct = (Product) obj;
+        return newProduct.id == this.id;
     }
 }

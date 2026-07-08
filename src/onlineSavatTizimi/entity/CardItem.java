@@ -1,33 +1,23 @@
 package onlineSavatTizimi.entity;
 
+import java.util.Map;
+
 public class CardItem {
     private String userName;
-    private String productName;
-    private int count;
+    private Map<Product, Integer> products;
 
-
-
-
-    public int getCount() {
-        return count;
+    public boolean addProduct(Product product) {
+        int count = 1;
+        if (existProduct(product)) {
+            count = this.products.get(product);
+            count += 1;
+            products.put(product, count);
+        } else
+            products.put(product, count);
+        return true;
     }
 
-    public void setCount(int count) {
-        this.count = count;
-    }
-
-    public CardItem(String userName, String productName, int count) {
-        this.userName = userName;
-        this.productName = productName;
-        this.count = count;
-    }
-
-    @Override
-    public String toString() {
-        return "CartItem{" +
-                "userName='" + userName + '\'' +
-                ", productName='" + productName + '\'' +
-                ", count=" + count +
-                '}';
+    public boolean existProduct(Product product) {
+        return this.products.containsKey(product);
     }
 }

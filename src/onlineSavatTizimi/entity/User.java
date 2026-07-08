@@ -1,8 +1,12 @@
 package onlineSavatTizimi.entity;
 
+import java.util.List;
+
 public class User {
     private int id;
+    private String username;
     private String name;
+    private List<Order> orders;
 
 
     public User(int id, String name) {
